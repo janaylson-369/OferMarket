@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofer Market | Novas Ofertas todos os dias</title>
+    <link rel="stylesheet" href="arquivo css/visual.css">
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        function searchProducts() {
+            let input = document.getElementById("search-input").value.toLowerCase();
+            let products = document.querySelectorAll(".cartao-de-produtos");
+            
+            products.forEach(product => {
+                let title = product.querySelector("h3").innerText.toLowerCase();
+                if (title.includes(input)) {
+                    product.style.display = "block";
+                } else {
+                    product.style.display = "none";
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div style='background-color: rgb(7, 10, 26); text-align: center;'>
+        <img src="imagens/download.jpeg" height="80">
+        <h1 style="color: lightyellow;">Offer Market</h1>
+        <form class="formulario" onsubmit="event.preventDefault(); searchProducts();">
+            <input type="text" placeholder="Buscar produtos" size="50" id="search-input">
+            <button type="submit">
+                <img src="imagens/lupa.png" width="10">
+            </button>
+        </form>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h1 style="color:crimson; text-align:center;">MENU</h1>
+        <a href="monitor.html" style="color:lightgreen;">Monitor</a>
+        <a href="gabinete.html" style="color:lightgreen;">Gabinete</a>
+        <a href="teclado.html" style="color:lightgreen;">Teclado</a>
+        <a href="#" style="color:lightgreen;">Fone</a>
+        <h2 style="text-align:center; color:crimson;">Info</h2>
+        <p>Contato: (83)94002-8922</p>
+        <p>E-mail: hellohity@gmail.com</p>
+    </div>
+    
+    <span style='font-size:30px;cursor:pointer' onclick="openNav()">&#9776;</span>
+
+    <div class="container">
+        <div class="cartao-de-produtos">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_683113-MLA82658342635_022025-F.webp" alt="Produto">
+            <div class="product-info">
+                <h3>VGA Asus Geforce Nvidia Tuf Gaming RTX 5070 Ti 16 GB Gddr7</h3>
+                <p class="product-price">R$14.227</p>
+                <a href="#" class="buy-btn">Comprar</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
