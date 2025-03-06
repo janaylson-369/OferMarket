@@ -14,6 +14,11 @@ color: lightyellow;
 .bar2{text-align: center;}
 
 .formulario{ text-align: center;}
+.menu:before {
+    content: '\002630';  /* Símbolo */
+    font-size: 40px;     /* Aumenta o tamanho */
+    display: inline-block; /* Garante que respeite o tamanho da fonte */
+}
 .menu {
     background-color: rgb(0, 0, 0);
     color: white;
