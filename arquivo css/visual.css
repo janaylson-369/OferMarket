@@ -17,10 +17,11 @@ color: lightyellow;
 .menu:before {
     content: '\002630';  /* Símbolo */
     font-size: 40px;     /* Aumenta o tamanho */
+    color: lightyellow;
     display: inline-block; /* Garante que respeite o tamanho da fonte */
 }
 .menu {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(7,7,26);
     color: white;
     border: none;
     cursor: pointer;
