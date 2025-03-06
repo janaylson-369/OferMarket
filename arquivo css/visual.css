@@ -40,6 +40,7 @@ color: lightyellow;
     display: none;
     background-color: rgb(10, 21, 26);
     min-width: 100px;
+    position: fixed;
 }
 .dropdown-child a {
     color: rgb(236, 236, 246);
